@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "name": "Story book",
+        "title": "Lorem ipsum",
+        "price": 20,
+        "category": "Free",
+        "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        
+    },
+    {
+        "id": 2,
+        "name": "Story book",
+        "title": "Lorem ipsum",
+        "price": 240,
+        "category": "Free",
+        "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        
+    },
+    {
+        "id": 3,
+        "name": "Comedy book",
+        "title": "Lorem ipsum",
+        "price": 120,
+        "category": "Comedy",
+        "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        
+    },
+    {
+        "id": 4,
+        "name": "Story book",
+        "title": "Lorem ipsum",
+        "price": 10,
+        "category": "Free",
+        "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        
+    },
+    {
+        "id": 5,
+        "name": "Music book",
+        "title": "Lorem ipsum",
+        "price": 20,
+        "category": "Music",
+        "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2098&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        
+    }
+
+]

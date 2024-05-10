@@ -20,7 +20,7 @@ export default function HeroSection() {
             <img src={hero}></img>
         </div>
       </div>
-      <hr></hr>
+      
     </>
   )
 }
