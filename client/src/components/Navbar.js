@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Login from './Login'
 
 export default function Navbar() {
     const navItems = (<>
@@ -61,7 +62,9 @@ export default function Navbar() {
   
 </label>
   <div className="">
-    <a className="bg-black text-white px-3 py-2 hover:bg-slate-800 cursor-pointer rounded-md">Login</a>
+    <a className="bg-black text-white px-3 py-2 hover:bg-slate-800 cursor-pointer rounded-md" 
+    onClick={()=>{document.getElementById('my_modal_3').showModal()}}>Login</a>
+    <Login></Login>
   </div>
   </div>
 </div>
