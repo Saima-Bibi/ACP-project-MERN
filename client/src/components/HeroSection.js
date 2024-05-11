@@ -1,5 +1,5 @@
 import React from 'react'
-import hero from '../images/hero.jpg'
+import books from '../images/books.png'
 export default function HeroSection() {
   return (
     <>
@@ -17,7 +17,7 @@ export default function HeroSection() {
 <button className="btn btn-primary mt-6">Primary</button>
         </div>
         <div className=' order-1 w-full md:w-1/2'>
-            <img src={hero}></img>
+            <img src={books}></img>
         </div>
       </div>
       

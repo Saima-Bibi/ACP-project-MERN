@@ -1,18 +1,18 @@
-
 import './App.css';
-import HeroSection from './components/HeroSection';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import TopSellingBooks from './components/TopSellingBooks'
+import Home from './home/Home';
+import Courses from './courses/Courses';
+import { Route, Routes} from 'react-router-dom'
 
 
 function App() {
   return (
   <>
-<Navbar></Navbar>
-<HeroSection></HeroSection>
-<TopSellingBooks></TopSellingBooks>
-<Footer></Footer>
+<div className=" dark:bg-slate-900 dark:text-white">
+<Routes>
+<Route path='/' element={<Home/>}/>
+<Route path='/course' element={<Courses/>}/>
+</Routes>
+</div>
   </>
   );
 }
