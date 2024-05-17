@@ -6,8 +6,8 @@ import Slider from "react-slick";
 
 import list from '../list.json'
 import Cards from './Cards';
-
-export default function TopSellingBooks() {
+export default function TopSellingPets() {
+  
     const filterData = list.filter((data)=> data.category === "Free");
     
     var settings = {
@@ -49,9 +49,8 @@ export default function TopSellingBooks() {
     <>
     <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
         <div>
-      <h1 className='font-semibold text-xl pb-2'>Free Offered Courses</h1>
-      <p>Lorem ispum sit dolor sit amet, contectectur adisocinsing huwerxvt isup ooytu htadefukry
-        kaluta munipatur halopeu hit nat qanatae earum
+      <h1 className='font-semibold text-xl pb-2'>Explore Pets</h1>
+      <p>Explore our wide range of adoptable pets and discover how you can make a difference in their lives—and yours. Join our community of pet lovers and start your adoption journey today!
       </p>
       </div>
    

@@ -7,7 +7,7 @@ export default function Footer() {
   <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded dark:bg-slate-900 dark:text-white dark:border">
   <nav className="grid grid-flow-col gap-4">
     <a className="link link-hover">Home</a>
-    <a className="link link-hover">Course</a>
+    <a className="link link-hover">All Pets</a>
     <a className="link link-hover">About</a>
     <a className="link link-hover">Contact</a>
   </nav> 

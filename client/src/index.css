@@ -6,3 +6,7 @@ body {
  
   font-family:'Poppins', sans-serif;
 }
+.background{
+  background-image:url('./images/PawPattern.jpg');
+ 
+}

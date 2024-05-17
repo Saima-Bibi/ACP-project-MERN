@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Login from './Login'
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
 
@@ -19,10 +20,10 @@ export default function Navbar() {
 
 
     const navItems = (<>
-      <li><a href='/'>Home</a></li>
-      <li><a href='/course'>Course</a></li>
-      <li><a>About</a></li>
-      <li><a>Contact</a></li>
+      <li><Link to='/'>Home</Link></li>
+      <li><Link to='/allpets'>All Pets</Link></li>
+      <li><Link to=''>About</Link></li>
+      <li><Link to=''>Contact</Link></li>
     </>)
     const[sticky, setSticky]= useState(false)
     useEffect(()=>{
@@ -44,14 +45,14 @@ export default function Navbar() {
       <div className="navbar">
   <div className="navbar-start">
     <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden ">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-md bg-base-100 rounded-box w-52 dark:bg-slate-900 dark:text-white dark:border-[2px] ">
       {navItems}
       </ul>
     </div>
-    <a className=" text-2xl font-bold cursor-pointer">bookStore</a>
+    <p className=" text-2xl font-bold cursor-pointer">Paws<img></img></p>
   </div>
   <div className="navbar-end space-x-3">
   <div className="navbar-center hidden lg:flex">
@@ -85,8 +86,8 @@ export default function Navbar() {
   
 </label>
   <div className="">
-    <a className="bg-black text-white px-3 py-2 hover:bg-slate-800 cursor-pointer rounded-md" 
-    onClick={()=>{document.getElementById('my_modal_3').showModal()}}>Login</a>
+    <button className="bg-sky-500 text-white px-4 py-2 hover:bg-sky-600 cursor-pointer rounded-md" 
+    onClick={()=>{document.getElementById('my_modal_3').showModal()}}>Login</button>
     <Login></Login>
   </div>
   </div>

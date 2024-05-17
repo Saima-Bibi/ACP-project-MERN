@@ -1,23 +1,20 @@
 import React from 'react'
-import books from '../images/books.png'
+import hero from '../images/hero.png'
 export default function HeroSection() {
   return (
     <>
     
-      <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10'>
+      <div className='max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10 '>
         <div className='w-full  order-2 md:order-1 md:w-1/2 md:mt-16 mt-12 '>
-            <div className='space-y-12 '>
-            <h1 className='text-4xl font-bold'>Hello welcome here to learn something<span className='text-blue-500'> new everyday!!!</span></h1>
-            <p className='text-xm'>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum</p>
-            <label className="input input-bordered flex items-center gap-2">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
-  <input type="text" className="grow" placeholder="Email" />
-</label>
+            <div className='space-y-12 mt-8'>
+            <h1 className='text-4xl font-bold'>Hello welcome here to Find Your <span className='text-sky-500'> Pawsitively Perfect Companion!!!</span></h1>
+            <p className='text-md'>At Paws, we believe every pet deserves a loving home. Whether you're looking for a playful puppy, a cuddly kitten, or a loyal senior companion, we connect you with animals in need of a second chance. Explore our wide range of adoptable pets and discover how you can make a difference in their lives—and yours. Join our community of pet lovers and start your adoption journey today!</p>
+          
 </div>
-<button className="btn btn-primary mt-6">Primary</button>
+<button className="btn hover:bg-sky-600 mt-6 bg-sky-500 text-white">Adopt Now</button>
         </div>
         <div className=' order-1 w-full md:w-1/2'>
-            <img src={books}></img>
+            <img src={hero}></img>
         </div>
       </div>
       
