@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
-import list from '../list.json'
+import axios from 'axios';
 import Cards from './Cards';
 export default function TopSellingPets() {
   
-    const filterData = list.filter((data)=> data.category === "Free");
+  const [pet, setPet] = useState([]);
+
+  useEffect(() => {
+    const getPet = async ()=>{
+      try {
+       const res = await axios.get("http://localhost:4001/pet");
+      const data = res.data.filter((data)=> data.category === "Free")
+       setPet(data);
+       console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+    
+    }
+    getPet();
+  }, [])
+  
     
     var settings = {
         dots: true,
@@ -56,7 +71,7 @@ export default function TopSellingPets() {
    
     <div>
     <Slider {...settings}>
-        {filterData.map((item) => (
+        {pet.map((item) => (
           <Cards item={item} key={item.id}/>
         ))}
       </Slider>

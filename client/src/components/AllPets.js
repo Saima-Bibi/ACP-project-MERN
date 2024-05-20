@@ -1,8 +1,26 @@
-import React from 'react'
-import list from '../list.json'
+import React, { useEffect, useState } from 'react'
 import Cards from './Cards';
+import axios from 'axios'
 import { Link } from 'react-router-dom';
+
 export default function AllPets() {
+
+  const [pet, setPet] = useState([]);
+
+  useEffect(() => {
+    const getPet = async ()=>{
+      try {
+       const res = await axios.get("http://localhost:4001/pet");
+       console.log(res.data);
+       setPet(res.data);
+
+      } catch (error) {
+        console.log(error);
+      }
+    
+    }
+    getPet();
+  }, [])
   return (
     <>
     <div className=" max-w-screen-2xl container mx-auto md:px-20 px-4 ">
@@ -23,7 +41,7 @@ export default function AllPets() {
   <div className=" mt-12 grid grid-cols-1 md:grid-cols-4">
     {
 
-    list.map((item)=>(
+    pet.map((item)=>(
       <Cards key={item.id} item={item}/>
     ))
 
