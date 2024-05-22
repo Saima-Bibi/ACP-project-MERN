@@ -2,10 +2,14 @@ import React from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { useForm} from "react-hook-form"    
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Login from './Login'
 
 export default function SignUp() {
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.form?.pathname || "/";
   const {
     register,
     handleSubmit,
@@ -23,6 +27,7 @@ export default function SignUp() {
       console.log(data);
       if(res.data){
         toast.success('SignUp successfully');
+        navigate(from, {replace: true});
       }
 
       localStorage.setItem("Users", JSON.stringify(res.data.user));
@@ -38,7 +43,7 @@ export default function SignUp() {
   return (
     <>
       
-     < div id="my_modal_4" className="">
+     < div id="my_modal_4" className="" >
   <div className="model-box">
     <form method="div">
       {/* if there is a button in form, it will close the modal */}
@@ -48,13 +53,13 @@ export default function SignUp() {
     <div className="flex min-h-full flex-col justify-center px-6 py-8 lg:px-12 mt-16 ">
   <div className="sm:mx-auto sm:w-full sm:max-w-sm">
     
-    <h2 className=" text-center text-xl font-bold leading-9 tracking-tight text-gray-900">Create your account</h2>
+    <h2 className=" text-center text-xl font-bold leading-9 tracking-tight dark:bg-slate-900 dark:text-white text-gray-900">Create your account</h2>
   </div>
 
   <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" action="#" method="POST">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 " action="#" method="POST">
     <div>
-        <label htmlFor="name" className="block text-sm  text-start font-medium leading-6 text-gray-900">Name</label>
+        <label htmlFor="name" className="block text-sm  text-start font-medium leading-6 dark:bg-slate-900 dark:text-white text-gray-900">Name</label>
         <div className="mt-2">
           <input id="name" name="name" type="text"  
            {...register("fullname", { required: true })} 
@@ -64,7 +69,7 @@ export default function SignUp() {
       </div>
      
       <div>
-        <label htmlFor="email" className="block text-sm text-start  font-medium leading-6 text-gray-900">Email address</label>
+        <label htmlFor="email" className="block text-sm text-start  font-medium leading-6 dark:bg-slate-900 dark:text-white text-gray-900">Email address</label>
         <div className="mt-2">
           <input id="email1" name="email" type="email"  
               {...register("email", { required: true })} 
@@ -74,7 +79,7 @@ export default function SignUp() {
       </div>
 
       <div>
-        <label htmlFor="password" className="block text-sm text-start  font-medium leading-6 text-gray-900">Password</label>
+        <label htmlFor="password" className="block text-sm text-start  font-medium leading-6 dark:bg-slate-900 dark:text-white text-gray-900">Password</label>
         <div className="mt-2">
           <input id="password1" name="password" type="password"  
               {...register("password", { required: true })} 

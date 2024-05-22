@@ -14,7 +14,7 @@ export default function HeroSection() {
 <button className="btn hover:bg-sky-600 mt-6 bg-sky-500 text-white">Adopt Now</button>
         </div>
         <div className=' order-1 w-full md:w-1/2'>
-            <img src={hero}></img>
+            <img src={hero} alt=''></img>
         </div>
       </div>
       
