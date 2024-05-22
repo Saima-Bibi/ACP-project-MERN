@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from 'axios'
+import toast from 'react-hot-toast'
 import { useForm} from "react-hook-form"    
 import { Link } from 'react-router-dom'
 import Login from './Login'
@@ -9,7 +11,30 @@ export default function SignUp() {
     handleSubmit,
     formState: { errors },
   } = useForm()
-  const onSubmit = (data) => console.log(data)
+
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email:data.email,
+      password:data.password
+    }
+    await axios.post("http://localhost:4001/user/signup", userInfo)
+    .then((res)=>{
+      console.log(data);
+      if(res.data){
+        toast.success('SignUp successfully');
+      }
+
+      localStorage.setItem("Users", JSON.stringify(res.data.user));
+
+    }).catch(err=>{
+      if(err.response){
+        console.log(err)
+        toast.error("Error : " + err.response.data.message);
+      }
+      
+    })
+  }
   return (
     <>
       
@@ -23,7 +48,7 @@ export default function SignUp() {
     <div className="flex min-h-full flex-col justify-center px-6 py-8 lg:px-12 mt-16 ">
   <div className="sm:mx-auto sm:w-full sm:max-w-sm">
     
-    <h2 className=" text-center text-xl font-bold leading-9 tracking-tight text-gray-900">Creat your account</h2>
+    <h2 className=" text-center text-xl font-bold leading-9 tracking-tight text-gray-900">Create your account</h2>
   </div>
 
   <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -32,9 +57,9 @@ export default function SignUp() {
         <label htmlFor="name" className="block text-sm  text-start font-medium leading-6 text-gray-900">Name</label>
         <div className="mt-2">
           <input id="name" name="name" type="text"  
-           {...register("name", { required: true })} 
+           {...register("fullname", { required: true })} 
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"/>
-         {errors.name && <span className='text-sm text-red-500'>This field is required</span>}
+         {errors.fullname && <span className='text-sm text-red-500'>This field is required</span>}
         </div>
       </div>
      
