@@ -11,10 +11,11 @@ export default function Logout() {
                 ...authUser,
                 user:null
             })
-            localStorage.removeItem("Users");
+            
             toast.success("Logout successfully");
 
             setTimeout(() =>{
+              localStorage.removeItem("Users");
                 window.location.reload();
               }, 1000); 
             

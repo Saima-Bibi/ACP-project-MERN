@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './components/Home';
 import Pets from './components/Pets';
+import Admin from './components/Admin';
 import { Toaster } from 'react-hot-toast';
 import { Navigate, Route, Routes} from 'react-router-dom'
 import SignUp from './components/SignUp';
@@ -19,6 +20,8 @@ function App() {
 <Route path='/' element={<Home/>}/>
 <Route path='/allpets' element={authUser? <Pets/> : <Navigate to="/signup" />}/>
 <Route path='/signup' element={<SignUp/>}/>
+<Route path='/admin' element={<Admin/>}/>
+
 </Routes>
 <Toaster/>
 

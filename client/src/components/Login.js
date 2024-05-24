@@ -18,19 +18,28 @@ export default function Login() {
    
     const userInfo = {
       email:data.email,
-      password:data.password
+      password:data.password,
+      role:data.role
     }
     await axios.post("http://localhost:4001/user/login", userInfo)
     .then((res)=>{
       console.log(data);
       if(res.data){
         toast.success('Login successfully');
-        navigate(from, {replace: true});
+        // navigate(from, {replace: true});
+        
+           // Redirect based on user role
+           if (res.data.user.role === 'admin') {
+            navigate('/admin', { replace: true }); // Redirect to admin dashboard
+          } else {
+            navigate('/', { replace: true }); // Redirect to user dashboard
+          }
         document.getElementById('my_modal_3').close();
         
         setTimeout(() =>{
           window.location.reload();
           localStorage.setItem("Users", JSON.stringify(res.data.user));
+
         }, 1000); 
       }
 
@@ -98,14 +107,14 @@ export default function Login() {
 
     <div className="mt-10 text-center text-sm text-gray-500">
       Not registered?
-      <Link to='/signup'  className="font-semibold leading-6 text-sky-600 hover:text-sky-500 cursor-pointer"
+      <Link to='/signup' className="font-semibold leading-6 text-sky-600 hover:text-sky-500 cursor-pointer"
      
       > Sign up</Link>
      
     </div>
   </div>
 </div>
-  </div>
+</div>
 </dialog>
     </>
   );
