@@ -7,10 +7,10 @@ import TopSellingPets from './TopSellingPets'
 export default function Home() {
   return (
     <>
-<Navbar></Navbar>
+
 <HeroSection></HeroSection>
 <TopSellingPets/>
-<Footer></Footer>
+
     </>
   )
 }
