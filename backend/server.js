@@ -19,6 +19,7 @@ app.use(express.json());
 
 //defining routes
 app.use("/pet", petRoute);
+app.use("/Paws", petRoute);
 app.use("/user", userRoute);
 app.use('/contact', contactRoute);
 

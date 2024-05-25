@@ -1,9 +1,11 @@
 import React from 'react'
+import Tabs from './Tabs'
 
 export default function Admin() {
   return (
-    <div>
-      <h2>Welcome to Admin Dashboard</h2>
-    </div>
+    <>
+      
+      <Tabs></Tabs>
+    </>
   )
 }

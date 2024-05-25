@@ -5,7 +5,7 @@ const routers = express.Router();
 
 
 
-routers.get("/", getPet)
+routers.get("/", getPets)
 
 routers.get('/getPets', getPets);
 routers.get('/getPet/:id',getPet);

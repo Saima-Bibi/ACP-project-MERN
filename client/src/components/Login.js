@@ -107,10 +107,11 @@ export default function Login() {
 
     <div className="mt-10 text-center text-sm text-gray-500">
       Not registered?
-      <Link to='/signup' className="font-semibold leading-6 text-sky-600 hover:text-sky-500 cursor-pointer"
-     
+      
+      <Link to='/signup' className=" font-semibold leading-6 text-sky-600 hover:text-sky-500 cursor-pointer"
+     onClick={()=>{document.getElementById('my_modal_3').close();}}
       > Sign up</Link>
-     
+    
     </div>
   </div>
 </div>

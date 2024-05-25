@@ -48,7 +48,7 @@ export default function SignUp() {
     <form method="div">
       {/* if there is a button in form, it will close the modal */}
       
-      <Link to='/' className="btn btn-sm btn-circle btn-ghost text-slate-600 absolute right-2 top-2">✕</Link>
+      <Link to='/' className="btn btn-sm btn-circle btn-ghost text-slate-600 absolute right-2 top-12">✕</Link>
     </form>
     <div className="flex min-h-full flex-col justify-center px-6 py-8 lg:px-12 mt-16 ">
   <div className="sm:mx-auto sm:w-full sm:max-w-sm">

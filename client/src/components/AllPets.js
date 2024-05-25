@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 
 export default function AllPets() {
 
-  const [pet, setPet] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const getPet = async ()=>{
       try {
-       const res = await axios.get("http://localhost:4001/pet");
+       const res = await axios.get('http://localhost:4001/Pet/getPets');
        console.log(res.data);
-       setPet(res.data);
+       setData(res.data);
 
       } catch (error) {
         console.log(error);
@@ -20,7 +20,7 @@ export default function AllPets() {
     
     }
     getPet();
-  }, [])
+  }, [data])
   return (
     <>
     <div className=" max-w-screen-2xl container mx-auto md:px-20 px-4 ">
@@ -38,11 +38,11 @@ export default function AllPets() {
   </Link>
 
   </div>
-  <div className=" mt-12 grid grid-cols-1 md:grid-cols-4">
+  <div className=" mt-12 grid grid-cols-1 md:grid-cols-3">
     {
 
-    pet.map((item)=>(
-      <Cards key={item.id} item={item}/>
+    data.pet?.map((item)=>(
+      <Cards key={item._id} item={item}/>
     ))
 
   }

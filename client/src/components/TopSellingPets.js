@@ -12,10 +12,12 @@ export default function TopSellingPets() {
   useEffect(() => {
     const getPet = async ()=>{
       try {
-       const res = await axios.get("http://localhost:4001/pet");
-      const data = res.data.filter((data)=> data.category === "Free")
+       const res = await axios.get("http://localhost:4001/Pet/getPets");
+       const response = res.data;
+       console.log(response.pet);
+      const data = response.pet.filter((data)=> data.status === "Available")
        setPet(data);
-       console.log(data);
+       
       } catch (error) {
         console.log(error);
       }
@@ -72,7 +74,7 @@ export default function TopSellingPets() {
     <div>
     <Slider {...settings}>
         {pet.map((item) => (
-          <Cards item={item} key={item.id}/>
+          <Cards item={item} key={item._id}/>
         ))}
       </Slider>
     </div>
