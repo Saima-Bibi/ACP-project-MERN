@@ -19,44 +19,8 @@ Paws is a dynamic and responsive pet adoption website designed to connect potent
 - Node
 - MongoDB
 
-Endpoints
 
-Pets
-- Get All Pets
-  ```
-  GET http://localhost:4001/Paws/getPets
-  ```
 
-- Get Specific Pet
-  ```
-  GET http://localhost:4001/Paws/getPet/:id
-  ```
-
-- Add Pet
-  ```
-  POST http://localhost:4001/Paws/addPet
-  ```
-
-- Update Pet
-  ```
-  PUT http://localhost:4001/Paws/updatePet/:id
-  ```
-
-- Delete Pet
-  ```
-  DELETE http://localhost:4001/Paws/deletePet/:id
-  ```
-
- Contacts
-- Add Contact
-  ```
-  POST http://localhost:4001/Paws/createContact
-  ```
-
-- Get Contact
-  ```
-  GET http://localhost:4001/Paws/getContact
-  ```
 
 ## GitHub Repository
 [GitHub: Paws Pet Adoption Website](https://github.com/Saima-Bibi/ACP-project-MERN)
