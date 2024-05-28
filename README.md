@@ -67,8 +67,7 @@ Paws is a dynamic and responsive pet adoption website designed to facilitate the
    ```
    node server.js
 
-  ## Web App Creators
-   Saima Bibi & Taleeha Tahoor
+
    ```
 
 5. **Start the frontend development server:**
@@ -81,3 +80,5 @@ Paws is a dynamic and responsive pet adoption website designed to facilitate the
    http://localhost:3000
    ```
 
+  ## Web App Creators
+   Saima Bibi & Taleeha Tahoor
