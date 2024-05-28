@@ -1,4 +1,4 @@
-## Paws Pet Adoption Website
+## Paws Pet Adoption Web App
 
 ## Project Description
 Paws is a dynamic and responsive pet adoption website designed to facilitate the process of connecting potential pet owners with pets in need of loving homes. The platform leverages modern web technologies to offer a seamless and user-friendly experience. Whether you're a prospective pet owner or an admin managing pet adoptions, Paws caters to your needs with its robust features and intuitive design. Utilizing modern web technologies, Paws provides a user-friendly interface for browsing available pets, submitting contact forms, and receiving real-time updates.
@@ -11,6 +11,7 @@ Paws is a dynamic and responsive pet adoption website designed to facilitate the
 -	UserPanel(contact operations Creat)
 -	Admin panel (pet operations CRUD)
 -	Admin panel (contact operations Read)
+-	Responsive UI Design
 
 
 ## Technology Stack
@@ -65,6 +66,9 @@ Paws is a dynamic and responsive pet adoption website designed to facilitate the
 4. **Start the backend server:**
    ```
    node server.js
+
+  ## Web App Creators
+   Saima Bibi & Taleeha Tahoor
    ```
 
 5. **Start the frontend development server:**
